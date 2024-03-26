@@ -3,6 +3,7 @@
 
 ## 简单使用
 假如有一个轮播图控件carouselView,我们希望其可见面积小于80%时停止滚动，使用Gaea曝光检测即可方便的实现这个功能:
+```
 carouselView.addGaeaExposureThresholdListener(0.8f) { visible->
     if(visible) {
         carouselView.resume() //可见性区域大于80%恢复滚动
@@ -10,7 +11,7 @@ carouselView.addGaeaExposureThresholdListener(0.8f) { visible->
         carouselView.pause() //可见性区域小于80%时暂停滚动
     }
 }
-
+```
 进阶使用可参考app模块内的示范代码
 
 ## 关于性能
